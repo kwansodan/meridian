@@ -91,3 +91,28 @@ export async function getExchangeRates() {
   const { data } = await apiClient.get<ExchangeRates>("/public/exchange-rates")
   return data
 }
+
+export type QuotePreviewLineItem = {
+  label: string
+  amount_minor: number
+  fee_type: "government" | "service" | string
+}
+
+export type QuotePreview = {
+  line_items: QuotePreviewLineItem[]
+  subtotal_government_minor: number
+  subtotal_service_minor: number
+  total_minor: number
+  currency: string
+}
+
+export async function getQuotePreview(entityType: string, foreignParticipation = false) {
+  const { data } = await apiClient.get<QuotePreview>("/public/quote-preview", {
+    params: {
+      entity_type: entityType,
+      foreign_participation: foreignParticipation,
+    },
+  })
+  return data
+}
+

@@ -11,6 +11,7 @@ from marshmallow import Schema, fields
 from app.admin import settings_service
 from app.admin.schemas import LandingConfigSchema
 from app.public.exchange import get_rates
+from app.workflow.schemas import QuotePreviewRequestSchema, QuotePreviewResponseSchema
 
 blp = Blueprint("public", __name__, url_prefix="/public", description="Public site configuration")
 
@@ -34,3 +35,14 @@ def landing_config_route():
 def exchange_rates_route():
     """USD-based rates for the landing page's indicative currency display."""
     return get_rates()
+
+
+@blp.route("/quote-preview", methods=["GET"])
+@blp.arguments(QuotePreviewRequestSchema, location="query")
+@blp.response(200, QuotePreviewResponseSchema)
+def public_quote_preview_route(args):
+    """Public, unauthenticated itemized fee quote calculation for prospective clients and SEO calculators."""
+    from app.workflow.quote_service import preview_quote
+
+    return preview_quote(args["entity_type"], args.get("foreign_participation", False))
+

@@ -1,0 +1,20 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /calculator
+Allow: /guides
+Allow: /guides/*
+Allow: /legal/*
+Allow: /login
+Allow: /signup
+
+# Disallow authenticated application state & sensitive paths
+Disallow: /app/
+Disallow: /ops/
+Disallow: /pay/
+Disallow: /sign/
+Disallow: /cofounder/
+Disallow: /verify-otp
+
+# Host & Sitemap declaration
+Sitemap: https://app.deevalegh.com/sitemap.xml

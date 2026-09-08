@@ -30,6 +30,7 @@ import { useCurrency } from "@/hooks/useCurrency"
 import { useInView } from "@/hooks/useInView"
 import { cn } from "@/lib/utils"
 import { figures, useLandingConfig } from "@/config/landing"
+import { SEO } from "@/components/SEO"
 
 // Deliberately not translated. tw.json is still a machine draft
 // (_meta.reviewed:false); unreviewed Twi on the page whose whole job is
@@ -163,6 +164,29 @@ export default function LandingPage() {
 
   return (
     <div className="bg-background min-h-svh">
+      <SEO
+        title="Deevale GH — Register and run your business in Ghana"
+        description="Incorporation at ORC, tax & SSNIT registration, GIPC foreign investment handling, and ongoing corporate compliance with live tracking."
+        canonicalUrl="https://app.deevalegh.com/"
+        keywords="register company in ghana, orc business registration, company limited by shares ghana, gipc registration ghana, foreign company registration ghana, virtual office accra"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LegalService",
+          "name": "Deevale GH",
+          "url": "https://app.deevalegh.com/",
+          "logo": "https://app.deevalegh.com/deevalegh-icon.svg",
+          "description": "Company registration, GIPC foreign investment compliance, and corporate secretarial platform in Ghana.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": company.address ?? "3rd Floor, Atlantic Tower, Airport City",
+            "addressLocality": "Accra",
+            "addressCountry": "GH",
+          },
+          "telephone": company.phone ?? undefined,
+          "email": company.email ?? undefined,
+          "priceRange": "$$",
+        }}
+      />
       {/* Needs its own translucent ground: bare backdrop-blur left the header
           transparent, so the ink wordmark vanished over the ink section. */}
       <header
@@ -173,7 +197,19 @@ export default function LandingPage() {
       >
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
           <Wordmark size="md" />
-          <nav className="flex items-center gap-2">
+          <nav className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/calculator"
+              className="text-muted-foreground hover:text-foreground hidden text-sm font-medium sm:block"
+            >
+              Fee Calculator
+            </Link>
+            <Link
+              to="/guides"
+              className="text-muted-foreground hover:text-foreground hidden text-sm font-medium sm:block"
+            >
+              Statutory Guides
+            </Link>
             <Button render={<Link to="/login">Log in</Link>} nativeButton={false} variant="ghost" size="sm" />
             <Button render={<Link to="/signup">Get started</Link>} nativeButton={false} size="sm" />
           </nav>
@@ -547,7 +583,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="border-border text-muted-foreground border-t px-4 py-12 text-sm">
-        <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="space-y-2">
             <Wordmark size="md" />
             <p className="text-foreground font-semibold">{company.legalName ?? "Deevale GH"}</p>
@@ -558,6 +594,21 @@ export default function LandingPage() {
               </p>
             )}
           </div>
+          <nav className="flex flex-col gap-2">
+            <p className="text-foreground font-semibold">Resources</p>
+            <Link to="/calculator" className="hover:underline">
+              Fee Calculator
+            </Link>
+            <Link to="/guides" className="hover:underline">
+              Statutory Guides
+            </Link>
+            <Link to="/guides/how-to-register-a-company-in-ghana-2026" className="hover:underline">
+              Company Registration
+            </Link>
+            <Link to="/guides/foreign-company-registration-ghana-gipc-guide" className="hover:underline">
+              GIPC Foreign Guide
+            </Link>
+          </nav>
           <nav className="flex flex-col gap-2">
             <p className="text-foreground font-semibold">Contact</p>
             {company.email && (

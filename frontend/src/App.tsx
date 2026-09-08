@@ -25,6 +25,9 @@ const AccountPage = lazy(() => import("@/pages/app/AccountPage"))
 const PayInvoicePage = lazy(() => import("@/pages/public/PayInvoicePage"))
 const SignPage = lazy(() => import("@/pages/public/SignPage"))
 const CoFounderAcceptPage = lazy(() => import("@/pages/public/CoFounderAcceptPage"))
+const FeeCalculatorPage = lazy(() => import("@/pages/public/FeeCalculatorPage"))
+const GuidesPage = lazy(() => import("@/pages/public/GuidesPage"))
+const GuideDetailPage = lazy(() => import("@/pages/public/GuideDetailPage"))
 const StartPage = lazy(() => import("@/pages/onboarding/StartPage"))
 const PaymentCallbackPage = lazy(() => import("@/pages/onboarding/PaymentCallbackPage"))
 
@@ -78,6 +81,9 @@ export default function App() {
         <Route path="/pay/:token" element={<PayInvoicePage />} />
         <Route path="/sign/:token" element={<SignPage />} />
         <Route path="/cofounder/:token" element={<CoFounderAcceptPage />} />
+        <Route path="/calculator" element={<FeeCalculatorPage />} />
+        <Route path="/guides" element={<GuidesPage />} />
+        <Route path="/guides/:slug" element={<GuideDetailPage />} />
         <Route path="/legal/:doc" element={<LegalPage />} />
 
         <Route element={<RequireAuth />}>
