@@ -17,4 +17,4 @@ Disallow: /cofounder/
 Disallow: /verify-otp
 
 # Host & Sitemap declaration
-Sitemap: https://app.deevalegh.com/sitemap.xml
+Sitemap: https://deevalegh.com/sitemap.xml

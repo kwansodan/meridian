@@ -5,7 +5,7 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage -->
   <url>
-    <loc>https://app.deevalegh.com/</loc>
+    <loc>https://deevalegh.com/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
   <!-- Interactive Utility Tools -->
   <url>
-    <loc>https://app.deevalegh.com/calculator</loc>
+    <loc>https://deevalegh.com/calculator</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -21,7 +21,7 @@
 
   <!-- Statutory Guides Knowledge Hub -->
   <url>
-    <loc>https://app.deevalegh.com/guides</loc>
+    <loc>https://deevalegh.com/guides</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -29,39 +29,53 @@
 
   <!-- Definitive Statutory Guides -->
   <url>
-    <loc>https://app.deevalegh.com/guides/how-to-register-a-company-in-ghana-2026</loc>
+    <loc>https://deevalegh.com/guides/how-to-register-a-company-in-ghana-2026</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://app.deevalegh.com/guides/foreign-company-registration-ghana-gipc-guide</loc>
+    <loc>https://deevalegh.com/guides/foreign-company-registration-ghana-gipc-guide</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://app.deevalegh.com/guides/ghana-business-compliance-calendar-deadlines</loc>
+    <loc>https://deevalegh.com/guides/ghana-business-compliance-calendar-deadlines</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <!-- Conversion Pages -->
+  <url>
+    <loc>https://deevalegh.com/signup</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://deevalegh.com/login</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
   <!-- Legal & Transparency -->
   <url>
-    <loc>https://app.deevalegh.com/legal/terms</loc>
+    <loc>https://deevalegh.com/legal/terms</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://app.deevalegh.com/legal/privacy</loc>
+    <loc>https://deevalegh.com/legal/privacy</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://app.deevalegh.com/legal/refund</loc>
+    <loc>https://deevalegh.com/legal/refund</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>

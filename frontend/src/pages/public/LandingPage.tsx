@@ -167,14 +167,14 @@ export default function LandingPage() {
       <SEO
         title="Deevale GH — Register and run your business in Ghana"
         description="Incorporation at ORC, tax & SSNIT registration, GIPC foreign investment handling, and ongoing corporate compliance with live tracking."
-        canonicalUrl="https://app.deevalegh.com/"
+        canonicalUrl="https://deevalegh.com/"
         keywords="register company in ghana, orc business registration, company limited by shares ghana, gipc registration ghana, foreign company registration ghana, virtual office accra"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LegalService",
           "name": "Deevale GH",
-          "url": "https://app.deevalegh.com/",
-          "logo": "https://app.deevalegh.com/deevalegh-icon.svg",
+          "url": "https://deevalegh.com/",
+          "logo": "https://deevalegh.com/deevalegh-icon.svg",
           "description": "Company registration, GIPC foreign investment compliance, and corporate secretarial platform in Ghana.",
           "address": {
             "@type": "PostalAddress",
