@@ -1,24 +1,18 @@
 import { useMemo, useState } from "react"
 import { Link, Navigate, useParams } from "react-router-dom"
 import {
-  AlertCircle,
   ArrowLeft,
   ArrowRight,
-  BookOpen,
   Calculator,
-  CheckCircle2,
   ChevronDown,
   Clock,
-  HelpCircle,
   Info,
   Lightbulb,
-  Share2,
   ShieldAlert,
   ShieldCheck,
-  UserCheck,
 } from "lucide-react"
 
-import { GUIDES, type StatutoryGuide } from "@/data/guidesData"
+import { GUIDES } from "@/data/guidesData"
 import { Wordmark } from "@/components/Wordmark"
 import { SEO } from "@/components/SEO"
 import { Badge } from "@/components/ui/badge"

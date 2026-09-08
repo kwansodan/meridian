@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { ArrowRight, BookOpen, Calculator, CheckCircle2, Clock, FileText, Globe2, ShieldCheck } from "lucide-react"
+import { ArrowRight, BookOpen, Calculator, Clock } from "lucide-react"
 
 import { GUIDES } from "@/data/guidesData"
 import { Wordmark } from "@/components/Wordmark"

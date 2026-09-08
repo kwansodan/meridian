@@ -8,12 +8,9 @@ import {
   Check,
   ChevronDown,
   Globe2,
-  HelpCircle,
   Info,
   MapPin,
-  RefreshCw,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react"
 
 import { getQuotePreview } from "@/api/public"
@@ -93,11 +90,11 @@ export default function FeeCalculatorPage() {
   const [includeCompliance, setIncludeCompliance] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
-  const { currency, convert } = useCurrency()
-  const { company, compliance } = useLandingConfig()
+  const { currency, setCurrency, convert } = useCurrency()
+  const { compliance } = useLandingConfig()
 
   // Fetch real-time fee items from public API endpoint
-  const { data: quotePreview, isLoading: isQuoteLoading } = useQuery({
+  const { data: quotePreview } = useQuery({
     queryKey: ["publicQuotePreview", selectedEntity.code, isForeign],
     queryFn: () => getQuotePreview(selectedEntity.code, isForeign),
     staleTime: 1000 * 60 * 15,
@@ -195,7 +192,7 @@ export default function FeeCalculatorPage() {
             <Link to="/guides" className="text-muted-foreground hover:text-foreground hidden text-sm font-medium sm:block">
               Statutory Guides
             </Link>
-            <CurrencyToggle />
+            <CurrencyToggle currency={currency} onChange={setCurrency} />
             <Button render={<Link to="/signup">Get Started</Link>} nativeButton={false} size="sm" />
           </nav>
         </div>
